@@ -1,5 +1,5 @@
 import React from 'react';
-
+//I read that section
 var initialData = {
   // The "user" collection. Contains all of the users in our Facebook system.
   "users": {
