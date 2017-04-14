@@ -3,10 +3,12 @@ var express = require('express');
 // Creates an Express server.
 var app = express();
 var util = require('./util');
-var reverseString = util.reverseString;
 var bodyParser = require('body-parser');
 var database = require('./database');
+//var getFeedData = require('./server')
 var readDocument = database.readDocument;
+//var XMLHttpRequest;
+
 app.use(bodyParser.text());
 // Defines what happens when it receives the `GET /` request
 /*app.get('/', function (req, res) {
