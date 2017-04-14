@@ -5,15 +5,9 @@ var app = express();
 var util = require('./util');
 var bodyParser = require('body-parser');
 var database = require('./database');
-//var getFeedData = require('./server')
 var readDocument = database.readDocument;
-//var XMLHttpRequest;
 
 app.use(bodyParser.text());
-// Defines what happens when it receives the `GET /` request
-/*app.get('/', function (req, res) {
-  res.send('Hello World!');
-});*/
 
 // Starts the server on port 3000!
 app.listen(3000, function () {
@@ -108,7 +102,7 @@ app.get('/user/:userid/feed', function(req, res) {
   var useridNumber = parseInt(userid, 10);
   if (fromUser === useridNumber) {
     // Send response.
-    res.send(getFeedData(userid));
+    //res.send(getFeedData(userid));
   } else {
     // 401: Unauthorized request.
     res.status(401).end();
